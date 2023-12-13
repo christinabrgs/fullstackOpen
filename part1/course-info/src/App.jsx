@@ -5,23 +5,21 @@ import Total from './components/Total'
 
 
 function App() {
- // Exercise props
- const exercises = [
-  { section: 'Fundamentals of React', exercise: 10 },
-  { section: 'Using props to pass data', exercise: 7 },
-  { section: 'State of a component', exercise: 14 },
-];
+  const course = 'Half Stack application development'
+  const part1 = 'Fundamentals of React'
+  const exercises1 = 10
+  const part2 = 'Using props to pass data'
+  const exercises2 = 7
+  const part3 = 'State of a component'
+  const exercises3 = 14
 
-// Calculate the total number of exercises
-const totalExercises = exercises.reduce((sum, { exercise }) => sum + parseInt(exercise), 0);
+
 
   return (
     <div>
-      <Header course='Half Stack application development' />
-      {exercises.map(({ section, exercise }, index) => (
-      <Content key={index} section={section} exercise={exercise}/>
-      ))}
-      <Total totalExercises={totalExercises} />
+      <Header course={course} />
+      <Content />
+      <Total totalExercises={exercises1 + exercises2 + exercises3} />
     </div>
   )
 }
