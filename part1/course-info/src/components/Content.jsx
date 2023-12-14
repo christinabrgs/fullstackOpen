@@ -1,5 +1,5 @@
 import React from "react";
-
+import Part from "./Part";
 export default function Content () {
   const part1 = 'Fundamentals of React'
   const exercises1 = 10
