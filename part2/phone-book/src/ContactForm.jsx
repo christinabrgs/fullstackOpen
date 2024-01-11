@@ -13,7 +13,7 @@ const ContactForm = ({ persons, setPersons }) => {
   });
 
   function generateUniqueId() {
-    return Date.now() + persons.length + 1;
+    return String(Date.now() + persons.length + 1)
   }
 
   function handleSubmit(event) {

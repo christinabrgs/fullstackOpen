@@ -16,6 +16,14 @@ const update = (id, newObject) => {
     return request.then(response => response.data)
 }
 
+const remove = id => {
+    const request = axios.delete(`${baseUrl}/${id}`);
+    return request.then(response => {
+      console.log('Resource deleted successfully:', response.data);
+      return response.data;
+    });
+  };
+
 const catchError = (error) => {
     console.error("Error:", error);
     // Handle error, e.g., show an alert or update state
@@ -23,4 +31,4 @@ const catchError = (error) => {
 }
 
 
-export default { getAll, create, update, catchError }
+export default { getAll, create, update, catchError, remove }
